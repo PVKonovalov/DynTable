@@ -1,5 +1,5 @@
 # DynTable
-I was trying to use the [awesome go table](https://github.com/tomlazar/table) for my purpose, but in my case, I need to add rows to the table while my application is running. 
+I was trying to use the [awesome-go table](https://github.com/tomlazar/table) for my purpose, but in my case, I need to add rows to the table while my application is running. 
 
 Since the table constructor now has no information about the data length of each table cell, I added a column width parameter.
 Also, each column of the table has an alignment option - Left or Right.
