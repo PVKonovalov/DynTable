@@ -3,6 +3,7 @@ I was trying to use the [awesome go table](https://github.com/tomlazar/table) fo
 
 Since the table constructor now has no information about the data length of each table cell, I added a column width parameter.
 Also, each column of the table has an alignment option - Left or Right.
+# Usage
 
 ```Go
 
@@ -31,3 +32,10 @@ func main() {
 
 ```
 ![](DynTable.png)
+
+# Installation
+```Shell
+go get github.com/PVKonovalov/dyn_table
+```
+# Lisence
+MIT
