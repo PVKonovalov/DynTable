@@ -24,4 +24,4 @@ tab := table.Table{
 		tab.AppendRow(row)
 	}
 ```
-
+![](DynTable.png)
