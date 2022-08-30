@@ -90,8 +90,8 @@ func (t *DynTable) AppendRow(row []string) {
 	}
 	for i, v := range row {
 
-		if len(v) > t.Width[i] {
-			v = v[0:t.Width[i]]
+		if runewidth.StringWidth(v) > t.Width[i] {
+			v = runewidth.Truncate(v, t.Width[i], "")
 		}
 
 		if len(t.Align) == 0 || t.Align[i] == AlignRight {
