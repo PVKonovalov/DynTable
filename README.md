@@ -35,7 +35,7 @@ func main() {
 
 # Installation
 ```Shell
-go get github.com/PVKonovalov/dyn_table
+go install github.com/PVKonovalov/dyn_table
 ```
 # Lisence
 MIT
