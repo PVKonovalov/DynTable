@@ -80,7 +80,11 @@ func (t *DynTable) WriteHeader(conf *Config, idxColumnWidth int) {
 	t.rowColor = t.config.Color && t.config.AlternateColors && len(t.config.AltColorCodes) > 1
 }
 
-func (t *DynTable) AppendRow(row []string, altColor string) {
+func (t *DynTable) AppendRow(row []string) {
+	t.AppendRowWithColor(row,"")
+}
+
+func (t *DynTable) AppendRowWithColor(row []string, altColor string) {
 
 	if len(altColor) == 0 {
 		if t.rowColor {
