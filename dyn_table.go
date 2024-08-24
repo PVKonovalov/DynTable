@@ -86,17 +86,18 @@ func (t *DynTable) AppendRow(row []string) {
 
 func (t *DynTable) AppendRowWithColor(row []string, altColor string) {
 
-	if len(altColor) == 0 {
-		if t.rowColor {
-			fmt.Print(t.config.AltColorCodes[t.rowIdx%len(t.config.AltColorCodes)])
-		}
-	} else {
+	if t.rowColor {
+		fmt.Print(t.config.AltColorCodes[t.rowIdx%len(t.config.AltColorCodes)])
+	}
+	
+	if len(altColor) != 0 {
 		fmt.Print(ansi.ColorCode(altColor))
 	}
 	
 	if t.config.ShowIndex {
 		fmt.Printf(" [%*v]  ", t.idxColumnWidth, t.rowIdx+1)
 	}
+	
 	for i, v := range row {
 
 		if runewidth.StringWidth(v) > t.Width[i] {
