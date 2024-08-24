@@ -32,7 +32,7 @@ func DefaultConfig() *Config {
 		TitleColorCode:  ansi.ColorCode("yellow+buf"),
 		AltColorCodes: []string{
 			"",
-			"\u001b[40;1m",
+			"\u001b[40m",
 		},
 	}
 }
